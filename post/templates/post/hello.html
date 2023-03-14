@@ -1,10 +1,19 @@
 <!DOCTYPE html>
+
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Title</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello!, Django lo npe'bi</h1>
+<h1>Welcome to django</h1>
+<ul>
+    {% for post in posts %}
+    <li>{{post.title}}</li>
+    <li>{{post.body}}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>
