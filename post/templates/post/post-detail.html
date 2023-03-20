@@ -8,6 +8,11 @@
 <h1>{{post.title}}</h1>
 <p>{{post.body }}</p>
 <p>{{post.created_at}}</p>
+
+<a href="{% url 'delete' post.pk %}">Delete</a>
+<a href="{% url 'update' post.pk %}">Edit</a>
+
+
 <!--  <ul>-->
 <!--    <li>{{post.tile}}</li>-->
 <!--    <li>{{post.body}}</li>-->
